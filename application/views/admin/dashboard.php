@@ -16,7 +16,7 @@
     </a>
 
 
-    <a href="<?= SERVER_URL . 'admin/users/' ?>" class="total-users-container">
+    <a href="<?= base_url('admin/users/') ?>" class="total-users-container">
         <div class="card text-center ms-5 " style="width: 22rem;height: 220px; background-color: pink">
             <h3 class="mt-3"><b>Total Users</b></h3>
 
@@ -29,7 +29,7 @@
             </div>
         </div>
     </a>
-    <a href="<?= SERVER_URL . 'admin/users/' ?>" class="last-five-users-container">
+    <a href="<?= base_url('admin/users/')   ?>" class="last-five-users-container">
         <div class="card text-center ms-5 " style="width: 22rem;height: 310px; background-color: aqua">
             <h3 class="mt-3"><b>Last Added Users</b></h3>
 

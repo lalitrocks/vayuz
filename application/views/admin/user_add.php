@@ -46,7 +46,7 @@
 </style>
 <div class="p-4 blog_add">
 
-    <form action="<?= SERVER_URL ?>api/<?= isset($user_id) ? 'edit_user' : 'add_user' ?>" method="post">
+    <form action="<?= base_url('api/'.( isset($user_id) ? 'edit_user' : 'add_user' )) ?>" method="post">
         <h2>Add user</h2>
 
         <?php

@@ -234,7 +234,6 @@ switch (ENVIRONMENT)
 
 	// Name of the "system" directory
 	define('SYSDIR', basename(BASEPATH));
- 	define('SERVER_URL',  "$_SERVER[REQUEST_SCHEME]://$_SERVER[HTTP_HOST]/lalit_vayuz/");
 
 
 	// The path to the "application" directory

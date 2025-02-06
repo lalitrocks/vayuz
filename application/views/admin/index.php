@@ -7,18 +7,17 @@
     <title><?= $title ?></title>
     <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
     <!-- CSS Files -->
-    <link rel="shortcut icon" href="<?= SERVER_URL ?>assets/images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="<?= base_url('assets/images/favicon.png') ?>" type="image/x-icon">
 
-    <link rel="stylesheet" href="<?= SERVER_URL ?>assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href='<?= SERVER_URL . 'assets/css/admin/plugins.min.css' ?>' />
-    <link rel="stylesheet" href="<?= SERVER_URL ?>assets/fontawesome/css/all.css">
-    <link rel="stylesheet" href="<?= SERVER_URL ?>assets/css/admin/main.css">
-
-    <link rel="stylesheet" href='<?= SERVER_URL . 'assets/css/admin/kaiadmin.min.css' ?>' />
+    <link rel="stylesheet" href="<?= base_url('assets/bootstrap/css/bootstrap.min.css') ?>">
+    <link rel="stylesheet" href='<?= base_url('assets/css/admin/plugins.min.css') ?>' />
+    <link rel="stylesheet" href="<?= base_url('assets/fontawesome/css/all.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/admin/main.css') ?>">
+    <link rel="stylesheet" href='<?= base_url('assets/css/admin/kaiadmin.min.css')  ?>' />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.23.5/dist/bootstrap-table.min.css">
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="<?= SERVER_URL ?>assets/js/admin/jquery-3.7.1.min.js"></script>
+    <script src="<?= base_url('assets/js/admin/jquery-3.7.1.min.js') ?>"></script>
 
     <script>
         const jwtToken = localStorage.getItem('jwt_token');
@@ -36,7 +35,6 @@
                 contentType: 'application/json', // Specifies that you're sending JSON
             }).done(function(res) {
                 res = JSON.parse(res);
-                console.log(res);
                 
                 if (res.status == 404) {
                     window.location.href = window.location.protocol + "//" + window.location.hostname + "/lalit_vayuz/admin/profile/";
@@ -79,7 +77,7 @@
             <div class="sidebar-logo">
                 <!-- Logo Header -->
                 <div class="logo-header" data-background-color="dark">
-                    <a href="<?= SERVER_URL ?>admin" class="logo text-white">
+                    <a href="<?= base_url('admin') ?>" class="logo text-white">
                         Dashboard
                     </a>
                     <div class="nav-toggle">
@@ -100,14 +98,14 @@
                 <div class="sidebar-content">
                     <ul class="nav nav-secondary">
                         <li class="nav-item hidden-when-not-admin <?= $this->uri->segment(2) == 'users' ? 'active' : '' ?>    ">
-                            <a href="<?= SERVER_URL ?>admin/users">
+                            <a href="<?= base_url('admin/users') ?>">
                                 <i class="fas fa-home"></i>
                                 <p>Users</p>
                             </a>
 
                         </li>
                         <li class="nav-item  <?= $this->uri->segment(2) == 'profile' ? 'active' : '' ?>    ">
-                            <a href="<?= SERVER_URL ?>admin/profile">
+                            <a href="<?= base_url('admin/profile') ?>">
                                 <i class="fas fa-home"></i>
                                 <p>Profile</p>
                             </a>
@@ -177,7 +175,7 @@
                                 <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#"
                                     aria-expanded="false">
                                     <div class="avatar-sm">
-                                        <img src="<?= SERVER_URL ?>assets/images/usericon.png" alt="..."
+                                        <img src="<?= base_url('assets/images/usericon.png') ?>" alt="..."
                                             style="width: 40px;height: 40px;" />
                                     </div>
                                     <span class="profile-username">
@@ -190,7 +188,7 @@
                                         <li>
                                             <div class="user-box">
                                                 <div class="avatar-lg">
-                                                    <img src="<?= SERVER_URL ?>assets/images/usericon.png" alt="image profile"
+                                                    <img src="<?= base_url('assets/images/usericon.png') ?>" alt="image profile"
                                                         class="avatar-img rounded" />
                                                 </div>
                                                 <div class="u-text">
@@ -203,8 +201,8 @@
                                         </li>
                                         <li>
                                             <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item " href="<?= SERVER_URL ?>admin/dashboard">Dashboard</a>
-                                            <a class="dropdown-item" href="<?= SERVER_URL ?>admin/profile">Profile</a>
+                                            <a class="dropdown-item " href="<?= base_url('admin/dashboard') ?>">Dashboard</a>
+                                            <a class="dropdown-item" href="<?= base_url('admin/profile') ?>">Profile</a>
                                             <a class="dropdown-item" onclick="logout()">Logout</a>
                                         </li>
                                     </div>
@@ -230,14 +228,14 @@
             $('.hidden-when-not-admin').remove();
         }
     </script>
-    <script src="<?= SERVER_URL ?>assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="<?= SERVER_URL ?>assets/js/admin/popper.min.js"></script>
-    <script src="<?= SERVER_URL ?>assets/js/admin/kaiadmin.js"></script>
-    <script src="<?= SERVER_URL ?>assets/js/admin/jquery.scrollbar.min.js"></script>
+    <script src="<?= base_url('assets/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+    <script src="<?= base_url('assets/js/admin/popper.min.js') ?>"></script>
+    <script src="<?= base_url('assets/js/admin/kaiadmin.js') ?>"></script>
+    <script src="<?= base_url('assets/js/admin/jquery.scrollbar.min.js') ?>"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.23.5/dist/bootstrap-table.min.js"></script>
 
-    <script src="<?= SERVER_URL ?>assets/js/ajax.js"></script>
-    <script src="<?= SERVER_URL ?>assets/js/admin/main.js"></script>
+    <script src="<?= base_url('assets/js/ajax.js') ?>"></script>
+    <script src="<?= base_url('assets/js/admin/main.js') ?>"></script>
 
 
 </body>

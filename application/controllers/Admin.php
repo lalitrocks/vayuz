@@ -74,9 +74,6 @@ class Admin extends CI_Controller
         $this->load->view('admin/index', $data);
     }
 
-    public function test(){
-        $this->load->view('admin/test');
-
-    }
+    
   
 }

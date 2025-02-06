@@ -31,7 +31,7 @@ class Table extends CI_Controller
                     'last_log_in' => $row->last_log_in,
 
                     'action' => '
-                <a class="me-2" href="' . SERVER_URL . 'admin/user_edit/' . $row->admin_id . '" ><i class="fa-solid fa-pencil"></i></a>
+                <a class="me-2" href="' . base_url( 'admin/user_edit/' . $row->admin_id) . '" ><i class="fa-solid fa-pencil"></i></a>
                 
                 '
                 ];

@@ -1,6 +1,6 @@
 <table id="data-table"
     data-toggle="table"
-    data-url="<?= SERVER_URL ?>table/users"
+    data-url="<?= base_url('table/users') ?>"
     data-pagination="true"
     data-search="true"
     data-buttons="buttons">
@@ -24,7 +24,7 @@
                 text: 'Add',
                 icon: 'fa-add',
                 event: function() {
-                    window.location.href = `<?= SERVER_URL ?>admin/user_add`
+                    window.location.href = `<?= base_url('admin/user_add') ?>`
                 },
                 attributes: {
                     title: 'Add',

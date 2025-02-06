@@ -4,10 +4,10 @@
 <head>
     <!-- Design by foolishdeveloper.com -->
     <title><?= $title ?></title>
-    <link rel="shortcut icon" href="<?= SERVER_URL ?>assets/images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="<?= base_url('assets/images/favicon.png') ?>" type="image/x-icon">
     <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
 
-    <link rel="stylesheet" href="<?= SERVER_URL ?>assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets/bootstrap/css/bootstrap.min.css') ?>">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -168,7 +168,7 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form method="post" action="<?= SERVER_URL ?>api/<?= ($title == 'Admin register') ? 'register' : 'login' ?>">
+    <form method="post" action="<?= base_url('api/'. (($title == 'Admin register') ? 'register' : 'login' ) )?>">
         <h3 class="text-white">Admin <?= ($title == 'Admin register') ? 'Register' : 'Login' ?></h3>
 
         <p class="success text-success"></p>
@@ -204,16 +204,16 @@
         <button class="mb-2" type="submit"><?= ($title == 'Admin register') ? 'Register' : 'Log In' ?></button>
 
         <?php if ($title == 'Admin register') { ?>
-            <a href="<?= SERVER_URL ?>/admin/login">Already have an account?</a>
+            <a href="<?= base_url('admin/login') ?>">Already have an account?</a>
         <?php } else { ?>
-            <a href="<?= SERVER_URL ?>/admin/register">Dont have an account?</a>
+            <a href="<?= base_url('admin/register') ?>">Dont have an account?</a>
         <?php } ?>
 
     </form>
 
 
-    <script src="<?= SERVER_URL ?>assets/js/admin/jquery-3.7.1.min.js"></script>
-    <script src="<?= SERVER_URL ?>assets/js/ajax.js"></script>
+    <script src="<?= base_url('assets/js/admin/jquery-3.7.1.min.js') ?>"></script>
+    <script src="<?= base_url('assets/js/ajax.js') ?>"></script>
     
 </body>
 
